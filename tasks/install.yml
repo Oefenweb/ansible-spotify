@@ -1,0 +1,19 @@
+# tasks file
+---
+- name: ensure update-notifier directory
+  ansible.builtin.file:
+    path: /var/lib/update-notifier/user.d
+    state: directory
+    recurse: true
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_major_version is version('20', '>=')
+  tags:
+    - spotify-install-dependencies
+
+- name: install | dependencies
+  ansible.builtin.apt:
+    name: "{{ spotify_dependencies }}"
+    state: "{{ apt_install_state | default('latest') }}"
+  tags:
+    - spotify-install-dependencies
