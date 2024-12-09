@@ -4,7 +4,7 @@ spotify_keyring_id: 6224F9941A8AA6D1
 spotify_keyring_dst: /usr/share/keyrings/spotify.gpg
 spotify_repositories:
   - type: "deb [signed-by={{ spotify_keyring_dst }}]"
-    url: http://repository.spotify.com stable'
+    url: 'http://repository.spotify.com stable'
     component: 'non-free'
 
 spotify_dependencies_pre:
