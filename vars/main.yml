@@ -12,4 +12,4 @@ spotify_dependencies_pre:
   - dirmngr
 
 spotify_dependencies:
-  - spotify
+  - spotify-client
