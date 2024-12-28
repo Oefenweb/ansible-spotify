@@ -1,6 +1,6 @@
 # vars file
 ---
-spotify_keyring_id: 6224F9941A8AA6D1
+spotify_keyring_id: C85668DF69375001
 spotify_keyring_dst: /usr/share/keyrings/spotify.gpg
 spotify_repositories:
   - type: "deb [signed-by={{ spotify_keyring_dst }}]"
