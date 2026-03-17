@@ -6,6 +6,10 @@ spotify_repositories:
   - type: "deb [signed-by={{ spotify_keyring_dst }}]"
     url: 'http://repository.spotify.com stable'
     component: 'non-free'
+    state: absent
+  - type: "deb [signed-by={{ spotify_keyring_dst }}]"
+    url: 'https://repository.spotify.com stable'
+    component: 'non-free'
 
 spotify_dependencies_pre:
   - software-properties-common
